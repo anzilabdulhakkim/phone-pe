@@ -1,0 +1,97 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #paymentContainer {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #processingMessage {
+    position: relative;
+    display: none;
+    color: #888;
+  }
+
+  #successMessage {
+    position: relative;
+    display: none;
+    color: green;
+  }
+
+  #failureMessage {
+    position: relative;
+    display: none;
+    color: red;
+  }
+  
+  .spinner {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    animation: spinner-plncf9 4.8s infinite;
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+    content: "";
+    grid-area: 1/1;
+    border: 14.1px solid;
+    border-radius: 50%;
+    border-color: #474bff #474bff #0000 #0000;
+    mix-blend-mode: darken;
+    animation: spinner-plncf9 1.2s infinite linear;
+ }
+ 
+ .spinner::after {
+    border-color: #0000 #0000 #dbdcef #dbdcef;
+    animation-direction: reverse;
+ }
+ 
+ @keyframes spinner-plncf9 {
+    100% {
+       transform: rotate(1turn);
+    }
+ }
+ #main{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#phone{
+    width: 320px;
+    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.251);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+}
+#successMessage img{
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+}
+#failureMessage img{
+    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+}
